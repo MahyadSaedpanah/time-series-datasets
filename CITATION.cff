@@ -3,9 +3,11 @@ message: "If you use this catalog, please cite the repository and the original d
 title: "Time Series Dataset Hub"
 type: dataset
 authors:
-  - name: "MSadeghSeyfi"
-version: 0.2.0
+  - family-names: "Saedpanah"
+    given-names: "Mahyad"
+version: 0.3.0
 date-released: 2026-09-22
+repository-code: "https://github.com/MahyadSaedpanah/time-series-datasets"
 license: CC0-1.0
 keywords:
   - time-series
@@ -13,5 +15,9 @@ keywords:
   - forecasting
   - anomaly-detection
   - classification
+  - human-activity-recognition
+  - ecg
+  - sleep
+  - condition-monitoring
   - machine-learning
   - benchmark

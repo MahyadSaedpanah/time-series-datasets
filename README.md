@@ -2,6 +2,8 @@
 
 A research-oriented catalog of public time-series datasets, archives, and benchmarks for **forecasting, classification, anomaly detection, regression, representation learning, and signal analysis**.
 
+[![Catalog checks](https://github.com/MahyadSaedpanah/time-series-datasets/actions/workflows/catalog-check.yml/badge.svg)](https://github.com/MahyadSaedpanah/time-series-datasets/actions/workflows/catalog-check.yml)
+
 > **Scope:** this repository indexes canonical or well-documented sources. It does **not** re-upload third-party datasets unless redistribution is explicitly permitted.
 
 ## Why this repository exists
@@ -66,14 +68,41 @@ The source of truth is [`datasets.csv`](datasets.csv). The catalog below is gene
 | [Power Consumption of Tetouan City](https://archive.ics.uci.edu/dataset/849/power+consumption+of+tetouan+city) | regression, forecasting | energy | multivariate time series | 10-minute | 3 power zones; len 52416–52416 | public; CC BY 4.0 |
 | [Air Quality](https://archive.ics.uci.edu/dataset/360/air+quality) | regression, forecasting | climate, environment, sensors | multivariate time series | hourly | 1 sensor deployment; len 9358–9358 | public; CC BY 4.0 |
 
-### Classification & regression
+### Human Activity Recognition
 
 | Resource | Tasks | Domain | Structure | Frequency | Scale | Access / license |
 |---|---|---|---|---|---|---|
 | [Human Activity Recognition Using Smartphones](https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones) | classification, clustering | human activity, sensors | multivariate inertial-sensor windows | 50 Hz | 30 subjects | public; CC BY 4.0 |
-| [Condition Monitoring of Hydraulic Systems](https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems) | classification, regression | industrial, sensors | multivariate cyclic sensor time series | mixed: 1–100 Hz | 2,205 load cycles | public; CC BY 4.0 |
-| [BIDMC PPG and Respiration Dataset](https://physionet.org/content/bidmc/1.0.0/) | signal analysis, regression | healthcare, PPG, respiration | multivariate physiological waveforms | 125 Hz signals;1 Hz numerics | 53 recordings; len 8 minutes–8 minutes | open access; Open Data Commons Attribution License v1.0 |
+| [PAMAP2 Physical Activity Monitoring](https://archive.ics.uci.edu/dataset/231/pamap2+physical+activity+monitoring) | classification, activity recognition | human activity, sensors, wearables | multivariate wearable IMU and heart-rate time series | 100 Hz IMU;~9 Hz heart rate | 9 subjects | public; CC BY 4.0 |
+| [WISDM Smartphone and Smartwatch Activity and Biometrics Dataset](https://archive.ics.uci.edu/dataset/507/wisdm+smartphone+and+smartwatch+activity+and+biometrics+dataset) | classification, activity recognition, behavioral biometrics | human activity, sensors, wearables | multivariate smartphone and smartwatch inertial time series | 20 Hz | 51 subjects | public; CC BY 4.0 |
+| [OPPORTUNITY Activity Recognition](https://archive.ics.uci.edu/dataset/226/opportunity+activity+recognition) | classification, activity recognition, sensor fusion | human activity, sensors, wearables, ambient | multivariate wearable, object, and ambient sensor time series | see source | multiple subjects and ADL/drill sessions | public; CC BY 4.0 |
+
+### ECG / Heartbeat
+
+| Resource | Tasks | Domain | Structure | Frequency | Scale | Access / license |
+|---|---|---|---|---|---|---|
+| [MIT-BIH Arrhythmia Database](https://physionet.org/content/mitdb/1.0.0/) | classification, signal analysis, anomaly detection | healthcare, ECG | 2-channel physiological waveforms | 360 Hz | 48 half-hour recordings | open access; Open Data Commons Attribution License v1.0 |
+| [PTB-XL](https://physionet.org/content/ptb-xl/1.0.3/) | classification, ECG interpretation, representation learning | healthcare, ECG | 12-lead clinical ECG waveforms | 500 Hz;100 Hz downsampled | 21,799 ECG records / 18,869 patients; len 10 seconds–10 seconds | open access; CC BY 4.0 |
+| [St Petersburg INCART 12-lead Arrhythmia Database](https://physionet.org/content/incartdb/1.0.0/) | classification, arrhythmia detection, signal analysis | healthcare, ECG | annotated 12-lead ECG waveforms | 257 Hz | 75 half-hour recordings from 32 Holter records; len 30 minutes–30 minutes | open access; Open Data Commons Attribution License v1.0 |
+| [QT Database](https://physionet.org/content/qtdb/1.0.0/) | waveform delineation, interval measurement, signal analysis | healthcare, ECG | annotated two-lead ECG waveforms | see source | 105 recordings; len 15 minutes–15 minutes | open access; Open Data Commons Attribution License v1.0 |
+
+### Sleep / PSG
+
+| Resource | Tasks | Domain | Structure | Frequency | Scale | Access / license |
+|---|---|---|---|---|---|---|
 | [Sleep-EDF Database Expanded](https://physionet.org/content/sleep-edfx/1.0.0/) | classification, signal analysis | healthcare, sleep, EEG | multivariate polysomnography | mixed | 197 whole-night recordings | open access; See PhysioNet license terms |
+| [ISRUC-Sleep](https://sleeptight.isr.uc.pt/) | classification, sleep staging, signal analysis | healthcare, sleep, EEG, PSG | multivariate polysomnography | mixed | 126 PSG recording sessions across three subject groups | public; See source; citation requested |
+| [CAP Sleep Database](https://physionet.org/content/capslpdb/1.0.0/) | classification, sleep staging, CAP detection, signal analysis | healthcare, sleep, EEG, PSG | multivariate polysomnography | mixed | 108 PSG recordings | open access; Open Data Commons Attribution License v1.0 |
+| [Sleep Heart Health Study (SHHS)](https://sleepdata.org/datasets/shhs) | sleep staging, clinical prediction, signal analysis | healthcare, sleep, PSG, cardiovascular | overnight polysomnography plus longitudinal clinical data | mixed | 6,441 enrolled at SHHS1; second PSG obtained for 3,295 participants | controlled; request data access; See NSRR data access and use terms |
+
+### Machinery / Fault Diagnosis
+
+| Resource | Tasks | Domain | Structure | Frequency | Scale | Access / license |
+|---|---|---|---|---|---|---|
+| [Condition Monitoring of Hydraulic Systems](https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems) | classification, regression | industrial, sensors | multivariate cyclic sensor time series | mixed: 1–100 Hz | 2,205 load cycles | public; CC BY 4.0 |
+| [Case Western Reserve University Bearing Data Center](https://engineering.case.edu/bearingdatacenter/welcome) | classification, fault diagnosis, condition monitoring | industrial, machinery, bearings | bearing vibration time series with motor operating metadata | 12 kHz;48 kHz for selected drive-end experiments | multiple normal and seeded-fault experiments | public; See CWRU Bearing Data Center terms; no explicit dataset license stated on the cited data pages |
+| [Paderborn University Bearing DataCenter](https://mb.uni-paderborn.de/en/kat/research/bearing-datacenter) | classification, fault diagnosis, condition monitoring | industrial, machinery, bearings | synchronous vibration and motor-current time series | high-rate; see source | 32 bearing conditions; 4 operating conditions; 20 x 4-second measurements per setting; len 4 seconds–4 seconds | public; CC BY-NC 4.0 |
+| [NASA C-MAPSS Aircraft Engine Simulator Data](https://data.nasa.gov/dataset/c-mapss-aircraft-engine-simulator-data) | regression, prognostics, remaining useful life | aerospace, industrial, machinery, engine health | multivariate simulated turbofan degradation time series | flight/cycle based | simulated engine degradation trajectories | NASA Open Data; download currently unavailable; License not specified on NASA Open Data portal |
 
 ### Anomaly detection
 
@@ -88,7 +117,7 @@ The source of truth is [`datasets.csv`](datasets.csv). The catalog below is gene
 
 | Resource | Tasks | Domain | Structure | Frequency | Scale | Access / license |
 |---|---|---|---|---|---|---|
-| [MIT-BIH Arrhythmia Database](https://physionet.org/content/mitdb/1.0.0/) | classification, signal analysis, anomaly detection | healthcare, ECG | 2-channel physiological waveforms | 360 Hz | 48 half-hour recordings | open access; Open Data Commons Attribution License v1.0 |
+| [BIDMC PPG and Respiration Dataset](https://physionet.org/content/bidmc/1.0.0/) | signal analysis, regression | healthcare, PPG, respiration | multivariate physiological waveforms | 125 Hz signals;1 Hz numerics | 53 recordings; len 8 minutes–8 minutes | open access; Open Data Commons Attribution License v1.0 |
 | [MIMIC-IV Waveform Database v0.1.0](https://physionet.org/content/mimic4wdb/0.1.0/) | signal analysis, representation learning, clinical prediction | healthcare, ICU | multivariate physiological waveforms and numerics | mixed | 200 records / 198 patients | open access; See PhysioNet license terms |
 
 <!-- CATALOG:END -->
@@ -154,4 +183,4 @@ If this catalog is useful in a paper or project, cite the repository using [`CIT
 
 ---
 
-**v0.2:** curated breadth with provenance first. Quantity is not a substitute for source quality.
+**v0.3:** expanded coverage for human activity recognition, ECG/heartbeat, sleep/PSG, and machinery/fault-diagnosis datasets.
