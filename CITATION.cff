@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this catalog, please cite the repository and the original datasets you use."
+title: "Time Series Dataset Hub"
+type: dataset
+authors:
+  - name: "MSadeghSeyfi"
+version: 0.2.0
+date-released: 2026-09-22
+license: CC0-1.0
+keywords:
+  - time-series
+  - datasets
+  - forecasting
+  - anomaly-detection
+  - classification
+  - machine-learning
+  - benchmark
